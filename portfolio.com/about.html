@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        min-height: calc(200vh - 90px - 12vh);
+    }
+
+    header {
+        height: 90px;
+        background-color: rgb(136 1 211);
+        color: white;
+        position: sticky;
+        top: 0px;
+        width: 100%;
+    }
+
+    .nav {
+        float: right;
+        margin: 14px;
+    }
+
+    .logo {
+        width: 60px;
+        float: left;
+        margin: 7px;
+    }
+
+    ul li {
+        float: left;
+        align-content: space-around;
+        list-style: none;
+        padding: 10px;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-weight: 800;
+    }
+
+    a:hover {
+        color: red;
+        transition: 0.5s ease-out;
+
+    }
+
+    .signin {
+        padding: 10px 20px;
+        background-color: red;
+        border: transparent;
+        border-radius: 20px;
+        color: white;
+        font-weight: 600;
+    }
+
+    .language {
+        padding: 10px 20px;
+        background-color: rgb(0 142 255);
+        border: transparent;
+        border-radius: 20px;
+        color: white;
+        font-weight: 600;
+    }
+
+    div {
+        display: inline-flex;
+    }
+
+    .img {
+        border-radius: 324px;
+        border: 7px double red;
+        height: 280px;
+        margin: 250px 100px 100px 100px;
+    }
+
+    .info {
+        margin: 157px;
+        font-size: 20px;
+        color: gray;
+        text-align: justify;
+        text-transform: capitalize;
+    }
+
+    .info::first-letter {
+        color: red;
+        font-size: 40px;
+        text-transform: uppercase;
+    }
+
+    footer {
+        height: 60vh;
+    color: white;
+    background-color: rgb(136 1 211);
+    text-align: center;
+    width: 100%;
+    }
+
+    form {
+        background-color: rgb(26 25 25 / 65%);
+    display: inline-flex;
+    flex-direction: column;
+    padding: 10px 348px;
+    margin: 13px;
+    }
+
+    #name {
+        margin: 10px 20px;
+        padding: 5px 23px;
+        border-radius: 10px;
+        border: transparent;
+    }
+
+    #email {
+        margin: 10px 20px;
+        padding: 5px 23px;
+        border-radius: 10px;
+        border: transparent;
+    }
+
+    #phone {
+        margin: 10px 20px;
+        padding: 5px 23px;
+        border-radius: 10px;
+        border: transparent;
+    }
+
+    #message {
+        margin: 10px 20px;
+        padding: 5px 23px;
+        border-radius: 10px;
+        border: transparent;
+        resize: none;
+    }
+
+    #submit {
+        margin: 10px 20px;
+        font-weight: 700;
+    color: blueviolet;
+        padding: 5px 18px;
+        border-radius: 10px;
+        border: transparent;
+    }
+</style>
+
+<body>
+    <header>
+        <img src="C:\Users\lucky\Desktop\vs code project\portfolio.com\Picsart_22-06-02_17-52-13-054.png" class="logo">
+        <nav class="nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <button class="signin" onclick="signin()">Sign In</button>
+                <button class="language">English</button>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div> <img src="crop2.jpg" class="img">
+            <h2 class="info">hey this is aniket sen and i'm web developer as well as video editor. i have 2 years
+                experiance. i have been started to learn web development courses from 11th standard.here i hve been teach you web development tutorials. in this web pages many courses are available for you. for example :- HTML, CSS, JAVASCRIPT, REACT JS, PYHTON, C, C++ and so on with free of cost. and also premium courses also are available.
+                <br> <br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque perferendis minus quidem nobis sit
+                impedit, similique iste, at alias veritatis nostrum porro sint est atque cum dolore numquam incidunt
+                corrupti architecto dignissimos asperiores a qui. Et vel enim facere blanditiis ratione dolorem harum,
+                aspernatur veniam inventore molestias accusamus eius veritatis labore facilis. Quibusdam sit commodi
+                tenetur assumenda deleniti, nam molestias tempore perferendis est aliquid voluptatibus, inventore odio
+                cupiditate eaque ipsa sapiente impedit reiciendis laborum architecto itaque a omnis aliquam sunt! Magni
+                sequi earum aliquam tenetur adipisci debitis harum, quibusdam quis nisi dolorem voluptates ullam
+                quisquam commodi, vel id quidem perferendis!
+            </h2>
+        </div>
+    </main>
+    <footer>
+        &copy; copyright portfolio.com
+        <br>
+        <form onsubmit="sendemail()">
+            <h3>E-mail</h3>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Email Id" required>
+            <input type="text" id="phone" placeholder="Phone No." required>
+            <textarea id="message" rows="4" placeholder="How Can We Help You "></textarea>
+            <button type="submit" id="submit">Send</button>
+        </form>
+    </footer>
+</body>
+<script>
+    function signin() {
+        window.open('file:///C:/Users/lucky/Desktop/vs%20code%20project/portfolio.com/signin.html', '_parent')
+    }
+</script>
+<script>
+    function sendemail() {
+        Email.send({
+            Host: "aniketsen521@gmail.com",
+            Username: "darshikasen55@gmail.com",
+            Password: "darshikasen55",
+            To: "darshika3@gmail.com",
+            From: document.getElementById("email").value,
+            Subject: "new contact form enqiry",
+            Body: "Name:" + document.getElementById("name").value
+                + "<br> Email:" + document.getElementById("email").value
+                + "<br> Phone No:" + document.getElementById("phone").value
+                + "<br> Message:" + document.getElementById("message").value
+        }).then(
+            message => alert("Message Sent Succesfully")
+        );
+    }
+</script>
+</html>
